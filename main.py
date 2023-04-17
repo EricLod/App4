@@ -1,6 +1,7 @@
 from fpdf import FPDF
 import pandas as pd
 
+
 def footHead(ln):
     pdf.ln(ln)
     pdf.set_font(family="Times", style="I", size=8)
@@ -8,11 +9,13 @@ def footHead(ln):
     pdf.cell(w=0, h=12, txt=row["Topic"], align="R")
     pass
 
+
 def addLines():
     i = 20
     while i < 270:
         pdf.line(10, i, 200, i)
         i = i + 10
+
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 
